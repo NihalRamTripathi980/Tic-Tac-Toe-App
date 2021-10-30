@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343656"
+    tools:context=".Player_Activity">
+
+
+    <ImageView
+        android:id="@+id/player1Image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/playerX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/playerX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Player 1"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/player1Image"
+        app:layout_constraintStart_toStartOf="@+id/player1Image"
+        app:layout_constraintTop_toBottomOf="@+id/player1Image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playerOne"
+            android:layout_width="match_parent"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:inputType="textCapSentences"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#020202"
+        app:layout_constraintBottom_toTopOf="@+id/player2Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerX" />
+
+    <ImageView
+        android:id="@+id/player2Image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/playerY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerX"
+        app:srcCompat="@drawable/circle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/playerY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Player 2"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/player2Image"
+        app:layout_constraintStart_toStartOf="@+id/player2Image"
+        app:layout_constraintTop_toBottomOf="@+id/player2Image">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playerTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="8"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:elevation="10dp"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="@+id/playerY"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/playerY"
+        app:layout_constraintTop_toBottomOf="@+id/playerY" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2939393277152565/8129890086"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
